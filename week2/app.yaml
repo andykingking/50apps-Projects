@@ -1,0 +1,12 @@
+application: 50apps-week2
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+  
+- url: /.*
+  script: week2.py
+    
