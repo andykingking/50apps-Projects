@@ -1,21 +1,19 @@
 import os
-from google.appengine.ext import webapp
-from google.appengine.ext.webapp import template
-from google.appengine.ext.webapp.util import run_wsgi_app
+import webapp2
+import jinja2
 import week3-count
 
-class CountPage(webapp.RequestHandler):
+jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
+
+class CountPage(webapp2.RequestHandler):
 	def get(self):
-		path = os.path.join(os.path.dirname(__file__), 'index.html')
-		self.response.out.write(template.render(path, {}))
+		template = jinja_environment.get_template('index.html')
+		self.response.out.write(template.render({}))
 	def post(self):
 		# complete
 		search = week1.Search()
-		path = os.path.join(os.path.dirname(__file__),'' )
-		self.response.out.write(template.render(path, {}))
+		template = jinja_environment.get_template('')
+		self.response.out.write(template.render({}))
 
 
-app = webapp.WSGIApplication([('/', CountPage)], debug=True)
-
-if __name__ == "__main__":
-	run_wsgi_app(app)
+app = webapp2.WSGIApplication([('/', CountPage)], debug=True)

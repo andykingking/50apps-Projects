@@ -1,12 +1,16 @@
 application: 50apps-week3
 version: 1
-runtime: python
+runtime: python27
 api_version: 1
+threadsafe: true
 
 handlers:
 - url: /stylesheets
   static_dir: stylesheets
   
 - url: /.*
-  script: week3.py
-    
+  script: week3.app
+
+libraries:
+- name: jinja2
+  version: latest    
