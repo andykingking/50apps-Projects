@@ -32,8 +32,8 @@ def jsonify(top10, longest, shortest):
 def gen_stats(words):
 	shortest = sorted(words,key=len)[0]
 	longest = sorted(words,key=len,reverse=True)[0]
-	words = dict(zip(words,map(words.count,words)))
-	return jsonify(sorted(words,key=lambda word: words[word], reverse=True)[:10], longest, shortest)
+	words = list(set(zip(words,map(words.count,words))))
+	return jsonify(sorted(words,key=lambda word: word[1], reverse=True)[:10], longest, shortest)
 
 def get(url):
 	return gen_stats(parse_text(get_text(url)))

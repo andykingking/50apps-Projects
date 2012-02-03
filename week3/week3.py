@@ -11,10 +11,11 @@ class CountPage(webapp2.RequestHandler):
 		self.response.out.write(template.render({}))
 
 class Results(webapp2.RequestHandler):
-	def get(self):
-		url = str(self.request.body)
+	def post(self):
+		url = self.request.body
 		#url = 'http://www.cnn.com'
-		self.response.out.write(week3-count.get(url))
+		self.response.out.write(week3_count.get(url))
+		#self.response.out.write(url)
 
 app = webapp2.WSGIApplication([('/', CountPage),
 				('/results.json', Results)]
