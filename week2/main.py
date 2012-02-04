@@ -69,7 +69,7 @@ def search(seed_url, term):
 		urls_to_search.difference_update(remove_from_urls_to_search)
 		print "urls_to_search: ", urls_to_search
 		print "searched: ", searched
-	return [search for search in searched if searched[search][1] == True]
+	return [{'url':search,'result':searched[search][0],'level':searched[search][1]} for search in searched if searched[search][0] == True]
 
 if __name__ == "__main__":
 	print search(sys.argv[1],sys.argv[2])
