@@ -8,6 +8,7 @@ def get_text(url):
 
 def wordify(in_string):
 	words = re.sub(r'&.+;','',in_string)
+	words = re.sub(r'\r\n|\n|\\|/',' ',words)
 	words = words.split(' ')
 	words = map(lambda word: word.strip(string.punctuation+string.whitespace).lower(),words)
 	words = filter(lambda word: word not in common and len(word) > 0,words)
