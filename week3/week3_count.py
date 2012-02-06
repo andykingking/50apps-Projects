@@ -9,9 +9,8 @@ def get_text(url):
 def wordify(in_string):
 	words = re.sub(r'&.+;','',in_string)
 	words = words.split(' ')
-	words = [word.strip(string.punctuation+string.whitespace).lower() for word in words]
-	words = [word for word in words if word not in common]
-	words = [word for word in words if len(word) > 0]
+	words = map(lambda word: word.strip(string.punctuation+string.whitespace).lower(),words)
+	words = filter(lambda word: word not in common and len(word) > 0,words)
 	return words
 
 def reduce_func(x,y):
@@ -20,9 +19,9 @@ def reduce_func(x,y):
 
 def parse_text(text):
 	soup = BeautifulSoup(text)
-	[tag.extract() for tag in soup.findAll({'script':True})]
-	[tag.extract() for tag in soup.findAll(text=lambda x: isinstance(x, Comment))]
-	words = filter(lambda x: len(x) > 0,[wordify(s) for s in soup.body(text=True)])
+	map(lambda tag: tag.extract(),soup.findAll({'script':True}))
+	map(lambda tag: tag.extract(),soup.findAll(text=lambda x: isinstance(x, Comment)))
+	words = filter(lambda x: len(x) > 0,map(wordify,soup.body(text=True)))
 	words = reduce(reduce_func,words)
 	return words
 
