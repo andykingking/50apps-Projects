@@ -1,11 +1,24 @@
 .note {
 	background: #fff787;
 	border: solid 1px black;
-	word-wrap: normal;
-	overflow: hidden; 
+	word-wrap: normal; 
 	box-shadow: 2px 2px 2px rgba(0,0,0,0.5); 
-	width: 100px;
-	height: 100px;
 	padding: 10px;
+	width: 200px;
+	height: 200px;
 	position: absolute;
+}
+.title {
+	margin-bottom: 5px;
+	cursor: pointer;
+	border-bottom: 1px solid #000066;
+}
+textarea {
+	background: inherit;
+	border: none;
+	margin: 0;
+	overflow: auto;
+	padding: 0;
+	width: 180px;
+	height: 160px;
 }

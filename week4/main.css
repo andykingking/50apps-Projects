@@ -1,7 +1,26 @@
 body {
 	background: #cccccc;
 }
-.editor {
-	background: rgba(0,0,0,0);
+#make {
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff, #bbbbbb);
 	border: 1px solid black;
+	-moz-border-radius: 1px;
+	padding: 10px;
+	width: 180px;
+	margin: 5px;
+	text-align: center;
+	position: fixed;
+	top: 5px;
+	left: 5px;
+}
+#make:hover {
+	cursor: pointer;
+}
+#info {
+	padding: 10px;
+	margin: 5px;
+	position: fixed;
+	top: 5px;
+	left: 250px;
 }
