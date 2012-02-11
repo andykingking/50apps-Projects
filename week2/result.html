@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>50apps - Week 2 - Search Result Page</title>
+	</head>
+	<body>
+		<strong>Searched {{ url }} for "{{ term }}"</strong>
+		<hr>
+		<table>
+		<tr>
+			<th>URL</th><th>Level of search</th>
+		</tr>
+		{% for result in results %}
+		<tr>
+			<td>{{ result.url }}</td><td>{{ result.level }}</td>
+		</tr>
+		{% endfor %}
+		</table>
+	</body>
+</html>
