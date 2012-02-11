@@ -11,7 +11,7 @@ class SearchPage(webapp.RequestHandler):
 	def post(self):
 		url = cgi.escape(self.request.get('url'))
 		term = cgi.escape(self.request.get('term'))
-		results = main.Search(url, term)
+		results = main.search(url, term)
 		template_values = {
 			'url':url,
 			'term':term,
