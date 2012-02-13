@@ -10,9 +10,7 @@ body {
 	width: 180px;
 	margin: 5px;
 	text-align: center;
-	position: fixed;
-	top: 5px;
-	left: 5px;
+	display: inline-block;
 }
 #make:hover {
 	cursor: pointer;
@@ -20,7 +18,36 @@ body {
 #info {
 	padding: 10px;
 	margin: 5px;
-	position: fixed;
-	top: 5px;
-	left: 250px;
+	display: inline-block;
+}
+.colorpicker {
+	border: 1px black solid;
+	padding: 10px;
+	margin: 5px;
+	display: inline-block;
+	cursor: pointer;
+}
+.active {
+	font-weight: bold;
+	border: 2px black solid;
+}
+.yellow {
+	background: #fff787;
+}
+.blue {
+	background: #9CF3FF;
+}
+.green {
+	background: #9CFFA9;
+}
+.pink {
+	background: #FABBF2;
+}
+#remove {
+	background: red;
+	border: 1px black solid;
+	display: inline-block;
+	padding: 10px;
+	margin: 5px;
+	line-height: 100px;
 }
