@@ -4,6 +4,7 @@ body {
 #make {
 	background: #ffffff;
 	background: -moz-linear-gradient(top, #ffffff, #bbbbbb);
+	background: -webkit-linear-gradient(top, #ffffff, #bbbbbb);
 	border: 1px solid black;
 	-moz-border-radius: 1px;
 	padding: 10px;
