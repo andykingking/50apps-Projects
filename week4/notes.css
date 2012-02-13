@@ -13,11 +13,12 @@
 	border-bottom: 1px solid #000066;
 }
 textarea {
-	background: inherit;
+	background: none;
 	border: none;
 	margin: 0;
 	overflow: auto;
 	padding: 0;
 	width: 180px;
 	height: 160px;
+	resize: none;
 }

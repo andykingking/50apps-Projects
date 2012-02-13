@@ -34,21 +34,31 @@ body {
 }
 .yellow {
 	background: #fff787;
+	background: -webkit-linear-gradient(top,#fff787,#dfd767);
 }
 .blue {
 	background: #9CF3FF;
+	background: -webkit-linear-gradient(top,#9cf3ff,#7cd3df);
 }
 .green {
 	background: #9CFFA9;
+	background: -webkit-linear-gradient(top,#9cffa9,#7cdf89);
 }
 .pink {
 	background: #FABBF2;
+	background: -webkit-linear-gradient(top,#fabbf2,#da9bd2);
 }
 #remove {
-	background: red;
+	background: -webkit-linear-gradient(top,#ffffff,#cccccc);
+	color: red;
+	font-weight: bold;
 	border: 1px black solid;
-	display: inline-block;
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	width: 250px;
 	padding: 10px;
 	margin: 5px;
-	line-height: 100px;
+	line-height: 250px;
+	text-align: center;
 }
