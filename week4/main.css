@@ -4,23 +4,14 @@ body {
 #make {
 	background: #ffffff;
 	background: -moz-linear-gradient(top, #ffffff, #bbbbbb);
-<<<<<<< HEAD
-=======
 	background: -webkit-linear-gradient(top, #ffffff, #bbbbbb);
->>>>>>> master
 	border: 1px solid black;
 	-moz-border-radius: 1px;
 	padding: 10px;
 	width: 180px;
 	margin: 5px;
 	text-align: center;
-<<<<<<< HEAD
-	position: fixed;
-	top: 5px;
-	left: 5px;
-=======
 	display: inline-block;
->>>>>>> master
 }
 #make:hover {
 	cursor: pointer;
@@ -28,11 +19,6 @@ body {
 #info {
 	padding: 10px;
 	margin: 5px;
-<<<<<<< HEAD
-	position: fixed;
-	top: 5px;
-	left: 250px;
-=======
 	display: inline-block;
 }
 .colorpicker {
@@ -75,5 +61,4 @@ body {
 	margin: 5px;
 	line-height: 250px;
 	text-align: center;
->>>>>>> master
 }

@@ -1,14 +1,4 @@
 (function() {
-<<<<<<< HEAD
-  var make_note;
-  make_note = function() {
-    var d;
-    d = new Date();
-    return '<div class="note ui-draggable"><div class="title">' + d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear() + ' ' + d.toTimeString().slice(0, 5) + '</div><textarea></textarea></div>';
-  };
-  $(document).ready(function() {
-    return $("#make").click(function() {
-=======
   var append_note, deobjectify_notes, getActiveColor, make_note, objectify_notes, remove_note;
 
   getActiveColor = function() {
@@ -61,16 +51,12 @@
   $(document).ready(function() {
     var notes;
     $("#make").click(function() {
->>>>>>> master
       $("#pad").prepend(make_note());
       return $(".note").draggable({
         handle: "div.title",
         stack: ".note"
       });
     });
-<<<<<<< HEAD
-  });
-=======
     $(".colorpicker").click(function() {
       $(".active").removeClass("active");
       return $(this).addClass("active");
@@ -93,5 +79,4 @@
     });
   });
 
->>>>>>> master
 }).call(this);
